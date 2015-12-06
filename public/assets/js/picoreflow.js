@@ -338,7 +338,7 @@ function getOptions()
     {
   	  tickSize: 25,
       min: 0,
-	  max: 250,
+	  max: 550,
       tickDecimals: 0,
       draggable: false,
       tickColor: 'rgba(216, 211, 197, 0.2)',
