@@ -5,7 +5,7 @@ var points = [];
 var profiles = [];
 var selected_profile = 0;
 var time_mode = 0;
-var selected_profile_name = "leadfree";
+var selected_profile_name = "Dabs";
 
 var host = "ws://" + window.location.hostname + ":" + window.location.port;
 var ws_status = new WebSocket(host+"/status");
@@ -38,12 +38,12 @@ function updateProfile(id)
     selected_profile = id;
     job_time = parseInt(profiles[id].data[profiles[id].data.length-1][0]);
     var kwh = (3850*job_time/3600/1000).toFixed(2);
-    var cost =  (kwh*0.26).toFixed(2);
+    var cost =  (kwh*0.2).toFixed(2);
     var minutes = Math.floor(job_time/60), seconds = job_time-minutes*60;
     job_time = minutes+':'+ (seconds < 10 ? "0" : "") + seconds;
     $('#sel_prof').html(profiles[id].name);
     $('#sel_prof_eta').html(job_time);
-    $('#sel_prof_cost').html(kwh + ' kWh (EUR: '+ cost +')');
+    $('#sel_prof_cost').html(kwh + ' kWh (USD: '+ cost +')');
     graph.profile.data = profiles[id].data;
     graph.plot = $.plot("#graph_container", [ graph.profile, graph.live ] , getOptions());
 }
@@ -78,7 +78,7 @@ function updateProfileTable()
     var color = "";
 
     var html = '<h3>Profile Points</h3><div class="table-responsive" style="scroll: none"><table class="table table-striped">';
-        html += '<tr><th style="width: 50px">#</th><th>Target Time</th><th>Target Temperature in °C</th><th>Slope in &deg;C/s</th><th></th></tr>';
+        html += '<tr><th style="width: 50px">#</th><th>Target Time</th><th>Target Temperature in °C</th><th>Slope in &deg;F/s</th><th></th></tr>';
 
     for(var i=0; i<graph.profile.data.length;i++)
     {
