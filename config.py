@@ -10,7 +10,7 @@ log_format = '%(asctime)s %(levelname)s %(name)s: %(message)s'
 
 ### Server
 listening_ip = "0.0.0.0"
-listening_port = 8081
+listening_port = 80
 
 ########################################################################
 #
