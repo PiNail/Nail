@@ -81,7 +81,7 @@ class MAX6675(object):
 
     def to_c(self, celsius):
         '''Celsius passthrough for generic to_* method.'''
-        return celsius
+        return celsius * 9.0/5.0 + 32
 
     def to_k(self, celsius):
         '''Convert celsius to kelvin.'''
