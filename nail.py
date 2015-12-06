@@ -21,8 +21,8 @@ except:
     exit(1)
 
 logging.basicConfig(level=config.log_level, format=config.log_format)
-log = logging.getLogger("picoreflowd")
-log.info("Starting picoreflowd")
+log = logging.getLogger("nail")
+log.info("Starting nail")
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, script_dir + '/lib/')
