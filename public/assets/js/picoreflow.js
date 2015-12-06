@@ -390,7 +390,7 @@ $(document).ready(function()
         {
             console.log("Status Socket has been opened");
 
-            $.bootstrapGrowl("<span class=\"glyphicon glyphicon-exclamation-sign\"></span> <b>Yay</b><br/>I'm alive",
+            $.bootstrapGrowl("<span class=\"glyphicon glyphicon-exclamation-sign\"></span> <b>Sweet</b><br/>Lets Dab",
             {
             ele: 'body', // which element to append to
             type: 'success', // (null, 'info', 'error', 'success')
