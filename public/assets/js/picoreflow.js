@@ -38,7 +38,7 @@ function updateProfile(id)
     selected_profile = id;
     job_time = parseInt(profiles[id].data[profiles[id].data.length-1][0]);
     var kwh = (3850*job_time/3600/1000).toFixed(2);
-    var cost =  (kwh*0.2).toFixed(2);
+    var cost =  (kwh*0.02).toFixed(2);
     var minutes = Math.floor(job_time/60), seconds = job_time-minutes*60;
     job_time = minutes+':'+ (seconds < 10 ? "0" : "") + seconds;
     $('#sel_prof').html(profiles[id].name);
