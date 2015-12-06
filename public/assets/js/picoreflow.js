@@ -336,9 +336,9 @@ function getOptions()
 
 	yaxis:
     {
-  	  tickSize: 25,
+  	  tickSize: 100,
       min: 0,
-	  max: 550,
+	  max: 1200,
       tickDecimals: 0,
       draggable: false,
       tickColor: 'rgba(216, 211, 197, 0.2)',
