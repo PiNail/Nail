@@ -78,7 +78,7 @@ function updateProfileTable()
     var color = "";
 
     var html = '<h3>Profile Points</h3><div class="table-responsive" style="scroll: none"><table class="table table-striped">';
-        html += '<tr><th style="width: 50px">#</th><th>Target Time</th><th>Target Temperature in °C</th><th>Slope in &deg;F/s</th><th></th></tr>';
+        html += '<tr><th style="width: 50px">#</th><th>Target Time</th><th>Target Temperature in °F</th><th>Slope in &deg;F/s</th><th></th></tr>';
 
     for(var i=0; i<graph.profile.data.length;i++)
     {
