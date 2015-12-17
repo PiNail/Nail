@@ -55,7 +55,7 @@ class MAX6675(object):
             if (GPIO.input(self.data_pin)):
                 bytesin = bytesin | 1
             GPIO.output(self.clock_pin, GPIO.HIGH)
-        time.sleep(0.001)
+        time.sleep(0.0001)
         # Unselect the chip
         GPIO.output(self.cs_pin, GPIO.HIGH)
         # Save data
